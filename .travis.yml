@@ -4,3 +4,6 @@ elixir:
 otp_release:
   - 20.3
 sudo: false
+script:
+  - MIX_DEBUG=1 MIX_ENV=test elixir --erl '+S 2:2' -S mix compile
+  - MIX_DEBUG=1 MIX_ENV=test elixir --erl '+S 2:2' -S mix test
